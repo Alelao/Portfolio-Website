@@ -1,0 +1,275 @@
+/*Portions of this code use the Link Hover Effect from Great stack and scrollbar from fireship*/
+html {
+    scroll-behavior: smooth;
+}
+header{
+    color: 	#FDFCF9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+body{
+    background-color: #22262b;
+    padding: 0;
+    margin: 0;
+}
+body::-webkit-scrollbar{
+    width: .4em;
+}
+body::-webkit-scrollbar-track{
+    background-color: #2d333a;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #FDFCF9;
+}
+.social-links{
+    display: flex;
+}
+.social-links a{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: #FDFCF9;
+    box-shadow: 0 0 20px 10px rgba(253,252,249,.05);
+    margin: 0 30px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+.fa-solid, .fa-brands{
+    font-size: 30px;
+    line-height: 80px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+.social-links a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg,#22262b,#FDFCF9);
+    position: absolute;
+    transition: 0.5s;
+}
+.social-links a:hover::after{
+    top: 0;
+}
+.social-links a:hover{
+    transform: translateY(-10px);
+}
+.social-links a:hover .fa-brands{
+    color: #22262b;
+}
+.social-links a:hover .fa-solid{
+    color: #22262b;
+}
+section{
+    display: grid;
+    min-height: 140vh;
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+.show{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+h{
+    color: #FDFCF9;
+    font-family: "lucida console", "courier new", monospace;
+    font-size: 2em;
+}
+p{
+    font-family: "lucida console", "courier new", monospace;
+    font-size: 1.5em;
+    text-align: left;
+    color:  #bebebe;
+}
+#portrait1{
+    float: right;
+    padding: 20px;
+    margin-left: 30px;
+}
+.container{
+    display: inline-block;
+}
+.text{
+    font-family: "lucida console", "courier new", monospace;
+    color: #FDFCF9;
+    margin-top: 350px;
+    margin-left: 20px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(21),
+        cursor .4s step-end infinite alternate;
+}
+.textsec,
+.texttri {
+    margin-left: 35px;
+    opacity: 0;
+}
+.textsec{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(34) 1s forwards,
+        cursor .4s step-end infinite alternate;
+}
+.texttri{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(29) 2s forwards,
+        cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+@keyframes typing{
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.internallinks {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 100px;
+    transition: top 0.5s ease-in-out;
+    position: absolute;
+}
+.internallinks.show {
+    top: 0;
+}
+.internallinks a {
+    color: #FDFCF9;
+    text-decoration: none;
+    font-size: 9em;
+    font-family: Montserrat, "courier new", monospace;
+    margin-bottom: 20px;
+    animation: fade-up 3s;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.internallinks a:hover {
+    transform: scale(1.2);
+}
+.leftcontent{
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 75px;
+}
+#projects{
+    color: #FDFCF9;
+    margin-top: 300px;
+    padding: 50px;
+}
+#about{
+    color: #FDFCF9;
+    padding: 50px;
+}
+#contact{
+    color: #FDFCF9;
+    padding: 50px;
+}
+.centeredcontent{
+    text-align: center;
+    place-items: center;
+    align-content: center;
+}
+footer{
+    color: #FDFCF9;
+    font-size: 0.5em;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+#contactform {
+    padding: 25px;
+    background-color: #2d333a;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 20px;
+    font-family: "lucida console", "courier new", monospace;
+    box-shadow: inset;
+  }
+  #contactform label {
+    display: block;
+    font-weight: bold;
+    font-family: "lucida console", "courier new", monospace;
+    margin-bottom: 10px;
+    color: #FDFCF9;
+  }
+  #contactform input[type="text"],
+  #contactform input[type="email"],
+  #contactform textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    border-radius: 5px;
+    color: #bebebe;
+    background-color: #4b535a;
+    border: none;
+  }
+  #contactform textarea {
+    height: 200px;
+    width: 500px;
+    font-family: "lucida console", "courier new", monospace;
+    resize: none;
+  }
+  #contactform button[type="submit"] {
+    background-color: #384048;
+    color: #FDFCF9;
+    font-family: "lucida console", "courier new", monospace;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1);
+  }
+  #contactform button[type="submit"]:hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+
+

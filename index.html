@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <a></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information about Aleksander Oliveira Mastrianna">
+    <meta name="keywords" content="Oliveira Mastrianna, Resume, Software Development,">
+    <title> Aleksander Oliveira Mastrianna </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="preload" as="font">
+    <script src="https://kit.fontawesome.com/388cfe8eaa.js" crossorigin="anonymous"></script>
+    <script defer src="app.js"></script>
+ </head>
+ <body>
+    <div class="social-links">
+        <a href="http://linkedin.com/in/aleksander-oliveira-mastrianna-8b08a7290/" target="_blank" title="Opens New tab with my LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/Alelao" target="_blank" title="Opens new tab with my GitHub Profile"><i class="fa-brands fa-github"></i></a>
+        <a href="oliveiramastrianna_resume (2).pdf" target="_blank" title="Opens new tab containing my resume"><i class="fa-solid fa-file"></i></a>
+    </div>
+    <main>
+        <div class="container">
+            <h1 class="text"><b>ALEKSANDER MASTRIANNA</b></h1>
+            <p class="textsec">I'm a Software Engineering student</p>
+            <p class="texttri">at Washington State University.</p>
+        </div>
+        <div class="internallinks">
+        <a href="#projects" target="_self">PROJECTS</a>
+        <br>
+        <a href="#about" target="_self">ABOUT</a>
+        <br>
+        <a href="#contact" target="_self">CONTACT</a> 
+        </div>
+        <section class="hidden">
+        <div id="projects">
+            <div class="centeredcontent">
+            <h class="head">Projects</h>
+            </div>
+            <p class= "leftcontent">This Website</p>
+        </div>
+        </section>
+        <section class="hidden">
+        <div id="about">
+            <div class="centeredcontent">
+            <h class="head">About Me</h>
+            </div>
+            <img src="Images/portrait-transformed.jpeg" alt="picture portrait of me" id="portrait1"/>
+            <p class= "leftcontent">Since I was little, I have been fascinated with technology and how it works. I enjoy seeing new contraptions whether they be physical or digital. As I worked my way through years of schooling, I’ve always wanted to break into a field concerning technology. </p>
+            <br>
+            <p class="leftcontent">After graduating from high school, I decided to pursue a degree in software engineering at Washington State University with an expected graduation year of 2027. I strive to be involved with the school while simultaneously excelling at my academics. I’m passionate about software development and using new resources to expand my knowledge within the field.</p>
+        </div>
+        </section>
+        <section class="hidden">
+        <div id="contact">
+            <div class="centeredcontent">
+            <h class="head">Contact Me</h>
+            <p class="centeredcontent">Please contact me using the form below, I will get to you as possible.</p>
+            <form id="contactform" action="process_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Firstname Lastname" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter Email Here" id="formemail" name="email" required>
+                <label for="message">Message (Max 500 words):</label>
+                <textarea id="message" placeholder="Enter a Message Here" name="message" rows="4" required></textarea>
+                <div id="wordCount">0 words</div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copywright 2023</p>
+    </footer>
+ </body>
+ </html>
